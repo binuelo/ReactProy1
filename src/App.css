@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App {
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 400px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 2fr;
+    /**/
+    transform: translateX(10px) rotateY(35deg) rotateX(15deg);
+    align-items: center;
+    padding: 30px;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+    box-shadow: 0 10px 30px -3px rgba(0, 0, 0, .1);
+}
+
+.container button {
+    background: greenyellow;
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+}
+
+.contents1 {
+    grid-row: 1;
+}
+
+.contents2 {
+    grid-column: 2/4;
+}
+
+.contents2::first-letter {
+    background: #000;
+    line-height: 2;
+    padding: 5px;
+    margin: 1px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.contents3 {
+    grid-row: 2;
+    text-align: left;
+    list-style: none;
+    padding-top: 10px;
+}
+
+.contents4 {
+    grid-column: 2/4;
+    text-align: right;
+    list-style: none;
+    padding: 0;
+    padding-top: 10px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
